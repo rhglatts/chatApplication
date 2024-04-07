@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_socketio import SocketIO, emit
 
 app = Flask(__name__)
@@ -14,10 +14,21 @@ def index():
 #recieves the messages and displays them
 @chatapp.on('message')
 def handle_message(message):
+    session_id = request.sid
+    username = usernames.get(session_id, 'Anonymous')
     #shows in terminal
-    print('received message: ' + message)
+    print(f'{username}: {message}')
     #for flask html side
-    emit('message', message, broadcast=True)
+    emit('message', f'{username}: {message}', broadcast=True)
+
+
+usernames = {}
+# Gets username from HTML and binds username to session id in dictionary
+@chatapp.on('set_username')
+def set_username(username):
+    session_id = request.sid
+    usernames[session_id] = username
+
 
 #runs the flask app
 if __name__ == '__main__':

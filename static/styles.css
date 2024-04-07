@@ -1,0 +1,71 @@
+/* Container - The box element*/
+.container {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Username Form */
+.username-form form {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.username-form input[type="text"] {
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    flex: .7;
+}
+
+.username-form button,
+.message-input button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+
+/* Message Input and Send Button */
+.message-input {
+    display: flex;
+}
+
+.message-input input[type="text"] {
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    flex: .7;
+}
+
+.message-input button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* Chat Messages */
+.chat-messages ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.chat-messages .message {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
