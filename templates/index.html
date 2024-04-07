@@ -1,0 +1,30 @@
+<body>
+ <!--  --> 
+    <ul id="messages"></ul>
+    <!-- button triggers the send message function --> 
+    <input id="input" /><button onclick="sendMessage()">Send</button>
+
+    <!-- this is needed to load socket.io library and establish connection, see docs --> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+    <!-- creates a socket from the client (this html) to the server. then creates a listener with socket.on
+    and when a message is sent, appends it to the list of messages and displays it--> 
+    <!-- function sendMessage is called when the button is clicked. grabs text in box, clears text box,
+    and sends message through socket to server--> 
+    <script>
+        var socket = io();
+
+        socket.on('message', function(msg){
+            var li = document.createElement('li');
+            li.textContent = msg;
+            document.getElementById('messages').appendChild(li);
+        });
+
+        function sendMessage(){
+            var input = document.getElementById('input');
+            var message = input.value;
+            input.value = '';
+            socket.emit('message', message);
+        }
+    </script>
+</body>
+</html>
