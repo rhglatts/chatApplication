@@ -35,4 +35,4 @@ def set_username(username):
 
 # runs the flask app
 if __name__ == '__main__':
-    chatapp.run(app)
+    chatapp.run(app, host='0.0.0.0', port=80)
