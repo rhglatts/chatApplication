@@ -11,13 +11,13 @@
                 <button type="submit">Send</button>
             </form>
         </div>
-    
+
         <!-- Message Input and Send Button -->
         <div class="message-input">
             <input id="input" type="text" placeholder="Type your message...">
             <button onclick="sendMessage()">Send</button>
         </div>
-    
+
         <!-- Chat Messages -->
         <div class="chat-messages">
             <ul id="messages"></ul>
@@ -25,10 +25,12 @@
     </div>
 
 
-    <!-- this is needed to load socket.io library and establish connection, see docs --> 
+    <!-- this is needed to load socket.io library and establish connection, see docs -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
-    
+    <!-- this is need to load Crypto-js for encryption and decryption-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
     <!--Links javascript file to the HTML-->
     <script src="static/script.js"></script>
 </body>
 </html>
+
