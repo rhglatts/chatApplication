@@ -20,6 +20,7 @@
     border: 2px solid #007bff;
     border-radius: 5px;
     flex: .7;
+    font-family: "consolas";
 }
 
 .username-form button,
@@ -32,6 +33,7 @@
     cursor: pointer;
     font-size: 16px;
     margin-left: 10px;
+    font-family: "consolas";
 }
 
 
@@ -45,6 +47,7 @@
         border: 2px solid #007bff;
         border-radius: 5px;
         flex: .7;
+        font-family: "consolas";
     }
 
     .message-input button {
@@ -56,6 +59,7 @@
         cursor: pointer;
         font-size: 16px;
         margin-left: 10px;
+        font-family: "consolas";
     }
 
 /* Chat Messages */
@@ -77,4 +81,5 @@
     padding: 10px;
     background-color: #f0f0f0;
     border-radius: 10px;
+    font-family: "consolas";
 }
