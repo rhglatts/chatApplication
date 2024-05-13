@@ -1,10 +1,19 @@
 
-/* Container - The box element*/
+/* Container - The box element for the chat messenger*/
 .container {
     max-width: 700px;
     margin: 20px auto;
     padding: 20px;
-    border: 2px solid #ccc;
+    border: 2px solid #a9e141;
+    border-radius: 10px;
+}
+
+/*Container2 - The box element for the Home Screen*/
+.container2 {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #4169e1;
     border-radius: 10px;
 }
 
@@ -20,6 +29,7 @@
     border: 2px solid #007bff;
     border-radius: 5px;
     flex: .7;
+    font-family: "consolas";
 }
 
 .username-form button,
@@ -32,6 +42,7 @@
     cursor: pointer;
     font-size: 16px;
     margin-left: 10px;
+    font-family: "consolas";
 }
 
 
@@ -45,6 +56,7 @@
         border: 2px solid #007bff;
         border-radius: 5px;
         flex: .7;
+        font-family: "consolas";
     }
 
     .message-input button {
@@ -56,6 +68,7 @@
         cursor: pointer;
         font-size: 16px;
         margin-left: 10px;
+        font-family: "consolas";
     }
 
 /* Chat Messages */
@@ -67,8 +80,9 @@
 .chat-messages li {
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #f0f0f0;
+    background-color: #20fff4b6;
     border-radius: 10px;
+    font-family: "consolas";
 }
 
 
@@ -77,4 +91,5 @@
     padding: 10px;
     background-color: #f0f0f0;
     border-radius: 10px;
+    font-family: "consolas";
 }
